@@ -1,6 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-const App = () => {
+class App extends Component {
+    constructor(props) {
+      super(props);
+  
+      this.state = {
+        firstName: null,
+        lastName: null,
+        email: null,
+        password: null,
+        formErrors: {
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: ""
+        }
+      };
+    }
     render() {    
         return (
           <div className="wrapper">
