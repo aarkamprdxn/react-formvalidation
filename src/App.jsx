@@ -53,6 +53,37 @@ class App extends Component {
           console.log("form error");
         }
       };
+      // for taking value from all input
+  handleChange = event => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    let formErrors = { ...this.state.formErrors };
+
+    switch (name) {
+      case "firstName":
+        formErrors.firstName =
+          value.length < 3 ? "Atlest 3 characaters required" : "";
+        break;
+      case "lastName":
+        formErrors.lastName =
+          value.length < 3 ? "Atlest 3 characaters required" : "";
+        break;
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "Invalid email address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 6 ? "Atlest 6 characaters required" : "";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
+
     render() {    
         return (
           <div className="wrapper">
