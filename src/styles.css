@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #feca57;
+  text-align: center;
+}
+
+.card {
+  width: 25%;
+  height: 70vh;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
+  background-color: #54a0ff;
+  color: #fff;
+  padding: 6px 0 2px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  text-align: center;
+  height: 30px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  width: 60%;
+  border-bottom: 2px solid #54a0ff;
+  outline: none;
+}
+
+button {
+  margin-left: 5px;
+  min-height: 40px;
+  width: 40px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: #54a0ff;
+}
+
+button:hover {
+  background-color: #1dd1a1;
+}
+
+ol {
+  margin-top: 30px;
+}
+
+ol li {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: #54a0ff;
+  text-transform: capitalize;
+}
+
+.todo {
+  display: flex;
+  text-align: left;
+}
+.fa {
+  color: #54a0ff;
+  padding: 5px;
+}
+
+.fa:hover {
+  color: crimson;
+}
