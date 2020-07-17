@@ -1,5 +1,23 @@
 import React, { Component } from "react";
 
+
+//checking form is validate or not
+const formValid = ({ formErrors, ...rest }) => {
+    let valid = true;
+  
+    // validate form errors being empty
+    Object.values(formErrors).forEach(val => {
+      val.length > 0 && (valid = false);
+    });
+  
+    // validate the form was filled out
+    Object.values(rest).forEach(val => {
+      val === null && (valid = false);
+    });
+  
+    return valid;
+  };
+
 class App extends Component {
     constructor(props) {
       super(props);
