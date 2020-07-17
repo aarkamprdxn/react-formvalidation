@@ -17,6 +17,24 @@ class App extends Component {
         }
       };
     }
+
+    
+  // Submit button function for display result in console
+    handleSumbit = event => {
+        event.preventDefault();
+    
+        if (formValid(this.state.formError)) {
+          console.log(`
+          ** Submitted      
+          firstName:${this.state.firstName}
+          lastName:${this.state.lastName}
+          email:${this.state.email}
+          password:${this.state.password}
+          `);
+        } else {
+          console.log("form error");
+        }
+      };
     render() {    
         return (
           <div className="wrapper">
